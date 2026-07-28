@@ -87,14 +87,14 @@ function FeaturePanel({ feature }) {
           strokeWidth={1.5}
         />
       </div>
-      <h4 className="mt-6 text-2xl text-neutral-900 dark:text-white">
+      <h4 className="mt-6 text-2xl font-semibold text-neutral-900 dark:text-white">
         {feature.title}
       </h4>
-      <span className="font-heading mt-2 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white">
+      <span className="font-heading mt-2 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl">
         {feature.price}
       </span>
 
-      <p className="mt-6 text-neutral-600 dark:text-neutral-400">
+      <p className="mt-6 text-sm text-neutral-600 dark:text-neutral-400 sm:text-base">
         {feature.caption}
       </p>
 
@@ -137,13 +137,13 @@ export function Features13() {
               as="h2"
               thin="Wir sind"
               thick="Spezialisten"
-              className="text-3xl text-neutral-900 dark:text-white sm:text-4xl md:text-5xl"
+              className="text-3xl text-neutral-900 dark:text-white sm:text-4xl md:text-5xl lg:text-6xl"
             />
           </motion.div>
 
           <motion.p
             variants={fadeUp}
-            className="mt-5 max-w-xl text-base leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-lg">
+            className="mt-6 max-w-2xl text-base tracking-tight text-neutral-600 dark:text-neutral-400 sm:text-lg">
             Ob Leasingrückgabe oder Oldtimer – für jedes Problem haben wir die
             passende Lösung.
           </motion.p>

@@ -80,7 +80,7 @@ export default function Pricing3() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative flex flex-col rounded-3xl border p-6 sm:p-8 ${
+              className={`relative flex flex-col rounded-2xl border p-6 sm:p-8 ${
                 pkg.featured
                   ? "border-amber-400/60 shadow-2xl shadow-amber-400/30 dark:border-amber-400/50 dark:shadow-amber-400/20"
                   : "border-neutral-200 shadow-lg dark:border-neutral-800"
@@ -90,7 +90,7 @@ export default function Pricing3() {
                   Am beliebtesten
                 </span>
               )}
-              <h3 className="mb-4 text-2xl text-neutral-900 dark:text-white sm:text-3xl">
+              <h3 className="mb-4 text-2xl font-semibold text-neutral-900 dark:text-white sm:text-3xl">
                 {pkg.name}
               </h3>
               <p className="mb-8 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 sm:text-base">
@@ -115,7 +115,7 @@ export default function Pricing3() {
               {pkg.cta && (
                 <a
                   href="#kontakt"
-                  className="inline-flex w-fit cursor-pointer items-center justify-center rounded-full border border-neutral-900 px-6 py-3 text-sm font-medium text-neutral-900 transition-colors duration-200 hover:bg-neutral-900 hover:text-white dark:border-neutral-700 dark:text-white dark:hover:bg-white dark:hover:text-black">
+                  className="inline-flex w-fit items-center justify-center rounded-lg bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition-colors duration-200 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100">
                   Termin vereinbaren
                 </a>
               )}

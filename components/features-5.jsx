@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Hand, Droplets, Sparkles, ShieldCheck, Clock, Star } from "lucide-react";
 import Eyebrow from "@/app/components/Eyebrow";
+import Heading from "@/app/components/Heading";
 
 export function Features5() {
   const features = [
@@ -153,22 +154,25 @@ export function Features5() {
             <Eyebrow>Unsere Leistungen</Eyebrow>
           </motion.div>
 
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            className="text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-neutral-900 dark:text-white mb-6 max-w-3xl">
-            <span className="font-light">Premium Handwäsche</span>{" "}
-            <span className="font-bold">für dein Auto</span>
-          </motion.h2>
+            transition={{ duration: 0.4 }}>
+            <Heading
+              as="h2"
+              thin="Premium Handwäsche"
+              thick="für dein Auto"
+              className="max-w-3xl text-3xl text-neutral-900 dark:text-white sm:text-4xl md:text-5xl lg:text-6xl"
+            />
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="text-base tracking-tight sm:text-lg text-neutral-600 dark:text-neutral-400 mb-8">
+            className="mt-6 mb-8 max-w-2xl text-base tracking-tight text-neutral-600 dark:text-neutral-400 sm:text-lg">
             Handarbeit statt Waschstraße – wir behandeln jedes Fahrzeug mit der Sorgfalt, die es verdient.
           </motion.p>
 
