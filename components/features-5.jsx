@@ -16,7 +16,7 @@ export function Features5() {
       icon: Droplets,
       title: "Schonende Produkte",
       description:
-        "pH-neutrale, lackschonende Reinigungsmittel für ein makelloses Ergebnis ganz ohne Kratzer.",
+        "Lackschonende Reinigungsmittel für ein makelloses Ergebnis ganz ohne Kratzer.",
     },
     {
       icon: Sparkles,
@@ -34,7 +34,7 @@ export function Features5() {
       icon: Clock,
       title: "Flexible Termine",
       description:
-        "Online buchen, Auto bringen, entspannen – wir richten uns nach deinem Zeitplan.",
+        "Per Telefon buchen, Auto bringen, entspannen – wir richten uns nach deinem Zeitplan.",
     },
     {
       icon: Star,
@@ -46,6 +46,7 @@ export function Features5() {
 
   return (
     <section
+      id="leistungen"
       className="w-full py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-neutral-950 relative">
       {/* Dashed Top Right Fade Grid */}
       <div
