@@ -7,22 +7,26 @@ import Heading from "@/app/components/Heading";
 const sections = [
   {
     title: "Schutz und Werterhalt",
+    image: "/bilder/Aufbereitung-AMG.webp",
     body: [
       "Wir schützen Lack und Karosserie nachhaltig und erhalten so den Wert deines Fahrzeugs.",
     ],
   },
   {
     title: "Strahlender Glanz",
+    image: "/bilder/Aufbereitung-Ford.webp",
     body: ["Von der Felge bis zum Dach: dein Auto glänzt wie am ersten Tag."],
   },
   {
     title: "Zuverlässig und pünktlich",
+    image: "/bilder/Aufbereitung-Fiat500.webp",
     body: [
       "Auf uns ist Verlass – dein Termin wird eingehalten, ganz ohne Wartezeit.",
     ],
   },
   {
     title: "Zufriedenheit garantiert",
+    image: "/bilder/Innenraum-Aufbereitung.webp",
     body: [
       "Wir arbeiten erst dann fertig, wenn du mit dem Ergebnis rundum zufrieden bist.",
     ],
@@ -31,8 +35,8 @@ const sections = [
 
 export default function Features7() {
   return (
-    <section className="w-full flex items-start py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-neutral-950">
-      <div className="max-w-5xl mx-auto w-full flex flex-col gap-16 sm:gap-20">
+    <section className="relative w-full flex items-start overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="relative z-10 max-w-5xl mx-auto w-full flex flex-col gap-16 sm:gap-20">
         {/* Header */}
         <div>
           <motion.div
@@ -53,44 +57,49 @@ export default function Features7() {
               as="h2"
               thin="Darauf kannst du dich"
               thick="verlassen"
-              className="max-w-3xl text-3xl text-neutral-900 dark:text-white sm:text-4xl md:text-5xl lg:text-6xl"
+              className="max-w-3xl text-3xl text-neutral-900 sm:text-4xl md:text-5xl lg:text-6xl"
             />
           </motion.div>
         </div>
 
-        {/* Benefit Rows */}
-        <div className="flex flex-col gap-24 sm:gap-28">
+        {/* Benefit Grid - asymmetric bento */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 sm:auto-rows-[220px] lg:auto-rows-[260px]">
           {sections.map((s, i) => {
-            const flipped = i % 2 === 1;
+            const spanClass = [
+              "sm:col-span-2 sm:row-span-2",
+              "sm:col-span-1 sm:row-span-1",
+              "sm:col-span-1 sm:row-span-1",
+              "sm:col-span-3 sm:row-span-1",
+            ][i];
+            const big = i === 0;
             return (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                transition={{ duration: 0.3, delay: i * 0.05 }}
+                className={`group relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-auto ${spanClass}`}>
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10" />
                 <div
-                  className={`rounded-2xl bg-neutral-100 dark:bg-neutral-900 overflow-hidden aspect-4/3 flex items-center justify-center ${
-                    flipped ? "md:order-2" : ""
-                  }`}>
-                  <img
-                    src="/svg/placeholder.svg"
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div
-                  className={`flex flex-col gap-3 ${
-                    flipped ? "md:order-1" : ""
-                  }`}>
-                  <h3 className="text-3xl sm:text-4xl text-neutral-900 dark:text-white tracking-tight leading-tight">
+                  className={`relative z-10 flex h-full flex-col justify-end gap-2 p-6 sm:p-8`}>
+                  <h3
+                    className={`text-white tracking-tight leading-tight ${
+                      big ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"
+                    }`}>
                     {s.title}
                   </h3>
                   {s.body.map((p, pi) => (
                     <p
                       key={pi}
-                      className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                      className={`text-neutral-300 leading-relaxed ${
+                        big ? "text-base sm:text-lg max-w-md" : "text-sm sm:text-base"
+                      }`}>
                       {p}
                     </p>
                   ))}
