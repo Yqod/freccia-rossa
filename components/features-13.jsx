@@ -120,7 +120,9 @@ export function Features13() {
     features.find((feature) => feature.id === activeId) ?? features[0];
 
   return (
-    <section className="w-full bg-white px-4 py-16 dark:bg-neutral-950 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section
+      id="spezial"
+      className="w-full bg-white px-4 py-16 dark:bg-neutral-950 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto w-full max-w-[1400px]">
         <motion.div
           variants={container}
@@ -215,8 +217,15 @@ export function Features13() {
                           <p className="max-w-md pl-11 pr-8 text-base leading-relaxed text-neutral-600 dark:text-neutral-400">
                             {feature.body}
                           </p>
-                          <div className="mt-8 flex justify-center lg:hidden">
+                          <div className="mt-8 flex flex-col items-center lg:hidden">
                             <FeaturePanel feature={feature} />
+                            {feature.id !== "motorrad" && (
+                              <a
+                                href="#kontakt"
+                                className="mt-8 inline-flex items-center justify-center rounded-lg bg-neutral-900 px-8 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 sm:text-base">
+                                Termin vereinbaren
+                              </a>
+                            )}
                           </div>
                         </div>
                       </motion.div>
@@ -240,6 +249,14 @@ export function Features13() {
                 <FeaturePanel feature={active} />
               </motion.div>
             </AnimatePresence>
+
+            {active.id !== "motorrad" && (
+              <a
+                href="#kontakt"
+                className="mt-8 inline-flex items-center justify-center rounded-lg bg-neutral-900 px-8 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 sm:text-base">
+                Termin vereinbaren
+              </a>
+            )}
           </motion.div>
         </motion.div>
       </div>
