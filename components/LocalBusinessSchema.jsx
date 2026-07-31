@@ -7,7 +7,8 @@ export default function LocalBusinessSchema() {
     name: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
-    image: `${siteConfig.url}${siteConfig.ogImage}`,
+    image: `${siteConfig.url}${siteConfig.photo}`,
+    logo: `${siteConfig.url}${siteConfig.logo}`,
     telephone: siteConfig.phone,
     email: siteConfig.email,
     address: {
