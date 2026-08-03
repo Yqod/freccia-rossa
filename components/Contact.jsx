@@ -67,7 +67,7 @@ export default function Contact() {
                 <span className="block text-sm text-neutral-500 dark:text-neutral-400">
                   Adresse
                 </span>
-                <span className="font-heading text-2xl font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-3xl">
+                <span className="font-heading text-lg font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-xl">
                   {siteConfig.street}, {siteConfig.postalCode}{" "}
                   {siteConfig.locality}
                 </span>
@@ -84,7 +84,7 @@ export default function Contact() {
                 <span className="block text-sm text-neutral-500 dark:text-neutral-400">
                   Telefon
                 </span>
-                <span className="font-heading text-2xl font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-3xl">
+                <span className="font-heading text-lg font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-xl">
                   {siteConfig.phoneDisplay}
                 </span>
               </span>
@@ -96,11 +96,11 @@ export default function Contact() {
               <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-900">
                 <Mail className="h-6 w-6 text-neutral-900 dark:text-white" strokeWidth={1.5} />
               </span>
-              <span>
+              <span className="min-w-0">
                 <span className="block text-sm text-neutral-500 dark:text-neutral-400">
                   E-Mail
                 </span>
-                <span className="font-heading text-2xl font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-3xl">
+                <span className="block break-all font-heading text-lg font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-xl">
                   {siteConfig.email}
                 </span>
               </span>
@@ -118,7 +118,7 @@ export default function Contact() {
                 <span className="block text-sm text-neutral-500 dark:text-neutral-400">
                   Anfahrt
                 </span>
-                <span className="font-heading text-2xl font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-3xl">
+                <span className="font-heading text-lg font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-xl">
                   Route berechnen
                 </span>
               </span>
