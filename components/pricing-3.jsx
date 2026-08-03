@@ -115,7 +115,7 @@ export default function Pricing3() {
               {pkg.cta && (
                 <a
                   href="#kontakt"
-                  className="inline-flex w-fit items-center justify-center rounded-lg bg-neutral-900 px-6 py-3 text-sm font-medium text-white transition-colors duration-200 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100">
+                  className="inline-flex w-fit items-center justify-center rounded-lg bg-neutral-900 px-8 py-3 text-base font-medium text-white transition-colors duration-200 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100">
                   Termin vereinbaren
                 </a>
               )}

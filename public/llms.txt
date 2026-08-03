@@ -4,11 +4,11 @@
 
 ## Standort & Kontakt
 
-- Ort: Magdeburg, Deutschland
+- Adresse: Lorenzweg 10, 39106 Magdeburg
 - Öffnungszeiten: Montag bis Samstag, 8:00–17:00 Uhr (sonntags geschlossen)
-- Telefon: +49 391 123 456 7
-- E-Mail: info@freccia-rossa.de
-- Website: https://freccia-rossa.de
+- Telefon: 0163 2604298
+- E-Mail: info.frecciarossa@gmail.com
+- Website: https://autoaufbereitung-magdeburg.de
 
 ## Leistungen & Preise
 
@@ -25,5 +25,6 @@ Alle Fahrzeuge werden zu 100% von Hand gewaschen – keine Waschstraße.
 
 ## Seiten
 
-- [Startseite](https://freccia-rossa.de/): Alle Leistungen, Preise, Kundenstimmen, FAQ und Kontaktformular auf einer Seite.
-- [Datenschutzerklärung](https://freccia-rossa.de/datenschutz)
+- [Startseite](https://autoaufbereitung-magdeburg.de/): Alle Leistungen, Preise, Kundenstimmen, FAQ und Kontaktformular auf einer Seite.
+- [Datenschutzerklärung](https://autoaufbereitung-magdeburg.de/datenschutz)
+- [Impressum](https://autoaufbereitung-magdeburg.de/impressum)

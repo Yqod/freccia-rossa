@@ -15,6 +15,7 @@ const siteLinks = [
   { label: "Leistungen", href: "/#leistungen" },
   { label: "Preise", href: "/#preise" },
   { label: "Spezial", href: "/#spezial" },
+  { label: "Bewertungen", href: "/#bewertungen" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
 
@@ -126,6 +127,13 @@ export default function Footer() {
               href="/datenschutz"
               className="text-xs text-neutral-500 transition-colors hover:text-white">
               Datenschutz
+            </a>
+            <a
+              href="https://22orbit.de/webdesign"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-neutral-500 transition-colors hover:text-white">
+              Webdesign von 22orbit.de
             </a>
           </div>
         </div>

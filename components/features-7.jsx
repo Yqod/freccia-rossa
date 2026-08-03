@@ -28,7 +28,7 @@ const sections = [
     title: "Zufriedenheit garantiert",
     image: "/bilder/Innenraum-Aufbereitung.webp",
     body: [
-      "Wir arbeiten erst dann fertig, wenn du mit dem Ergebnis rundum zufrieden bist.",
+      "Die Arbeit ist erst dann abgeschlossen, wenn du mit dem Ergebnis rundum zufrieden bist.",
     ],
   },
 ];

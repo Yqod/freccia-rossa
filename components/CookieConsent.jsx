@@ -8,10 +8,23 @@ export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (!getConsent()) setVisible(true);
-    const handler = () => setVisible(false);
-    window.addEventListener(CONSENT_EVENT, handler);
-    return () => window.removeEventListener(CONSENT_EVENT, handler);
+    const consentHandler = () => setVisible(false);
+    window.addEventListener(CONSENT_EVENT, consentHandler);
+
+    if (getConsent()) {
+      return () => window.removeEventListener(CONSENT_EVENT, consentHandler);
+    }
+
+    const handleScroll = () => setVisible(true);
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+      once: true,
+    });
+
+    return () => {
+      window.removeEventListener(CONSENT_EVENT, consentHandler);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handle = (value) => {
@@ -47,13 +60,13 @@ export default function CookieConsent() {
               <button
                 type="button"
                 onClick={() => handle("declined")}
-                className="rounded-lg border border-neutral-700 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-900">
+                className="rounded-lg border border-neutral-700 px-8 py-3 text-base font-medium text-white transition-colors hover:bg-neutral-900">
                 Nur notwendige
               </button>
               <button
                 type="button"
                 onClick={() => handle("accepted")}
-                className="rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-neutral-900 transition-colors hover:bg-neutral-200">
+                className="rounded-lg bg-white px-8 py-3 text-base font-medium text-neutral-900 transition-colors hover:bg-neutral-200">
                 Akzeptieren
               </button>
             </div>

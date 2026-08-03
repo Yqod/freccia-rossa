@@ -59,7 +59,9 @@ const TESTIMONIALS = [
 
 export default function TestimonialsSearch() {
   return (
-    <section className="w-full bg-white px-4 py-16 dark:bg-neutral-950 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section
+      id="bewertungen"
+      className="w-full bg-white px-4 py-16 dark:bg-neutral-950 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto w-full max-w-[1400px]">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -143,10 +145,14 @@ export default function TestimonialsSearch() {
           transition={{ duration: 0.4 }}
           className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a href="#kontakt" className="w-full sm:w-auto">
-            <Button className="w-full sm:w-[220px]">Termin buchen</Button>
+            <Button className="h-auto w-full px-8 py-3 text-base sm:w-[220px]">
+              Termin buchen
+            </Button>
           </a>
           <a href="#preise" className="w-full sm:w-auto">
-            <Button variant="outline" className="w-full sm:w-[220px]">
+            <Button
+              variant="outline"
+              className="h-auto w-full px-8 py-3 text-base sm:w-[220px]">
               Preise ansehen
             </Button>
           </a>

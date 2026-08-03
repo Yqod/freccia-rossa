@@ -13,6 +13,8 @@ export default function LocalBusinessSchema() {
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",
+      streetAddress: siteConfig.street,
+      postalCode: siteConfig.postalCode,
       addressLocality: siteConfig.locality,
       addressCountry: "DE",
     },

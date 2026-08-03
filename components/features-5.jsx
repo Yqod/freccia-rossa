@@ -185,12 +185,12 @@ export function Features5() {
             className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
             <a
               href="#kontakt"
-              className="tracking-tight inline-flex items-center justify-center px-6 sm:px-8 py-2 sm:py-2.5 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-medium text-sm sm:text-base hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors duration-200 w-full sm:w-auto">
+              className="tracking-tight inline-flex items-center justify-center px-8 py-3 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-medium text-base hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors duration-200 w-full sm:w-auto">
               Termin buchen
             </a>
             <a
               href="#preise"
-              className="tracking-tight inline-flex items-center justify-center px-6 sm:px-8 py-2 sm:py-2.5 rounded-lg bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white font-medium text-sm sm:text-base border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors duration-200 w-full sm:w-auto">
+              className="tracking-tight inline-flex items-center justify-center px-8 py-3 rounded-lg bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white font-medium text-base border border-neutral-200 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors duration-200 w-full sm:w-auto">
               Preise ansehen
             </a>
           </motion.div>

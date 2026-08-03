@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/site-config";
+
 export const metadata = {
   title: "Datenschutzerklärung",
   description:
@@ -18,18 +20,20 @@ export default function DatenschutzPage() {
             1. Verantwortlicher
           </h2>
           <p className="mt-3">
-            [Vollständiger Firmenname / Inhaber:in]
+            {siteConfig.ownerName}
             <br />
-            [Straße und Hausnummer]
+            {siteConfig.name}
             <br />
-            [PLZ und Ort]
+            {siteConfig.street}
+            <br />
+            {siteConfig.postalCode} {siteConfig.locality}
             <br />
             E-Mail:{" "}
-            <a href="mailto:info@freccia-rossa.de" className="underline">
-              info@freccia-rossa.de
+            <a href={`mailto:${siteConfig.email}`} className="underline">
+              {siteConfig.email}
             </a>
             <br />
-            Telefon: +49 391 123 456 7
+            Telefon: {siteConfig.phoneDisplay}
           </p>
         </section>
 

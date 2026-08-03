@@ -222,7 +222,7 @@ export function Features13() {
                             {feature.id !== "motorrad" && (
                               <a
                                 href="#kontakt"
-                                className="mt-8 inline-flex items-center justify-center rounded-lg bg-neutral-900 px-8 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 sm:text-base">
+                                className="mt-8 inline-flex items-center justify-center rounded-lg bg-neutral-900 px-8 py-3 text-base font-medium text-white transition-colors duration-200 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100">
                                 Termin vereinbaren
                               </a>
                             )}
@@ -253,7 +253,7 @@ export function Features13() {
             {active.id !== "motorrad" && (
               <a
                 href="#kontakt"
-                className="mt-8 inline-flex items-center justify-center rounded-lg bg-neutral-900 px-8 py-2.5 text-sm font-medium text-white transition-colors duration-200 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 sm:text-base">
+                className="mt-8 inline-flex items-center justify-center rounded-lg bg-neutral-900 px-8 py-3 text-base font-medium text-white transition-colors duration-200 hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100">
                 Termin vereinbaren
               </a>
             )}

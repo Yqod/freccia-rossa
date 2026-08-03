@@ -54,7 +54,26 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.2 }}
           className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-[1.3fr_1fr] lg:gap-6">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-1">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=${LAT},${LNG}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-4 rounded-2xl border border-neutral-200 px-6 py-5 transition-colors hover:border-brand dark:border-neutral-800">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-900">
+                <MapPin className="h-6 w-6 text-neutral-900 dark:text-white" strokeWidth={1.5} />
+              </span>
+              <span>
+                <span className="block text-sm text-neutral-500 dark:text-neutral-400">
+                  Adresse
+                </span>
+                <span className="font-heading text-2xl font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-3xl">
+                  {siteConfig.street}, {siteConfig.postalCode}{" "}
+                  {siteConfig.locality}
+                </span>
+              </span>
+            </a>
+
             <a
               href={`tel:${siteConfig.phone}`}
               className="group flex items-center gap-4 rounded-2xl border border-neutral-200 px-6 py-5 transition-colors hover:border-brand dark:border-neutral-800">
@@ -155,7 +174,7 @@ export default function Contact() {
               href={`https://www.google.com/maps/dir/?api=1&destination=${LAT},${LNG}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute bottom-6 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 rounded-lg bg-white px-6 sm:px-8 py-2 sm:py-2.5 text-sm sm:text-base font-medium text-neutral-900 shadow-lg transition-colors duration-200 hover:bg-neutral-100">
+              className="absolute bottom-6 left-1/2 -translate-x-1/2 inline-flex items-center gap-2 rounded-lg bg-white px-8 py-3 text-base font-medium text-neutral-900 shadow-lg transition-colors duration-200 hover:bg-neutral-100">
               <Navigation className="h-4 w-4 text-brand" />
               Route berechnen
             </a>
@@ -175,7 +194,7 @@ export default function Contact() {
                 setConsent("accepted");
                 setMapsAllowed(true);
               }}
-              className="inline-flex items-center justify-center rounded-lg bg-neutral-900 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100">
+              className="inline-flex items-center justify-center rounded-lg bg-neutral-900 px-8 py-3 text-base font-medium text-white transition-colors hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100">
               Karte laden
             </button>
           </div>

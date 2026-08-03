@@ -19,6 +19,7 @@ export function Navigation6() {
     { label: "Leistungen", href: "/#leistungen" },
     { label: "Preise", href: "/#preise" },
     { label: "Spezial", href: "/#spezial" },
+    { label: "Bewertungen", href: "/#bewertungen" },
   ];
 
   return (
@@ -62,7 +63,7 @@ export function Navigation6() {
           {/* Kontakt CTA */}
           <a
             href="/#kontakt"
-            className="cursor-pointer flex items-center gap-2 px-4 sm:px-5 py-2 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand/90 transition-colors outline-none">
+            className="cursor-pointer flex items-center gap-2 px-8 py-3 rounded-full bg-brand text-white text-base font-medium hover:bg-brand/90 transition-colors outline-none">
             <Phone className="w-4 h-4" />
             Kontakt
           </a>
