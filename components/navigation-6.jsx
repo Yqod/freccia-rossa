@@ -41,9 +41,8 @@ export function Navigation6() {
             <Image
               src="/video/bilder/logo-schwarz-cropped.png"
               alt="Freccia Rossa"
-              width={1406}
-              height={345}
-              priority
+              width={293}
+              height={72}
               className="h-7 w-auto sm:h-9"
             />
           </a>

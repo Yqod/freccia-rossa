@@ -1,9 +1,14 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { motion } from "motion/react";
 import Eyebrow from "@/app/components/Eyebrow";
 import Heading from "@/app/components/Heading";
-import ParallaxCarousel from "@/components/parallax-carousel";
+
+const ParallaxCarousel = dynamic(() => import("@/components/parallax-carousel"), {
+  ssr: false,
+});
 
 const GALLERY_IMAGES = [
   "/caroussel/Autoaufbereitung-Hof.webp",
@@ -15,6 +20,28 @@ const GALLERY_IMAGES = [
 ];
 
 export default function GalleryCarousel() {
+  const carouselWrapRef = useRef(null);
+  const [loadCarousel, setLoadCarousel] = useState(false);
+
+  useEffect(() => {
+    const node = carouselWrapRef.current;
+    if (!node || typeof IntersectionObserver === "undefined") {
+      setLoadCarousel(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLoadCarousel(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "600px 0px" },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="galerie"
@@ -53,22 +80,27 @@ export default function GalleryCarousel() {
       </div>
 
       <motion.div
+        ref={carouselWrapRef}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
         className="mt-12 h-[420px] w-full sm:h-[480px] lg:h-[560px]">
-        <ParallaxCarousel
-          images={GALLERY_IMAGES}
-          imageWidth={480}
-          imageHeight={460}
-          gap={24}
-          borderRadius={16}
-          parallaxIntensity={0.15}
-          uvScale={0.5}
-          loop
-          autoplaySpeed={40}
-        />
+        {loadCarousel ? (
+          <ParallaxCarousel
+            images={GALLERY_IMAGES}
+            imageWidth={480}
+            imageHeight={460}
+            gap={24}
+            borderRadius={16}
+            parallaxIntensity={0.15}
+            uvScale={0.5}
+            loop
+            autoplaySpeed={40}
+          />
+        ) : (
+          <div className="h-full w-full animate-pulse rounded-2xl bg-neutral-100 dark:bg-neutral-900" />
+        )}
       </motion.div>
     </section>
   );

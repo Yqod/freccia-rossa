@@ -32,8 +32,8 @@ export default function Footer() {
               <Image
                 src="/video/bilder/logo-weiss.png"
                 alt="Freccia Rossa"
-                width={1536}
-                height={1024}
+                width={288}
+                height={192}
                 className="h-20 w-auto sm:h-24"
               />
             </a>
