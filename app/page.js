@@ -4,6 +4,7 @@ import Pricing3 from "@/components/pricing-3";
 import Features7 from "@/components/features-7";
 import { Features13 } from "@/components/features-13";
 import TestimonialsSearch from "@/components/shadcnui/testimonials-search";
+import GalleryCarousel from "@/components/gallery-carousel";
 import FAQ1 from "@/components/faq-1";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -52,6 +53,7 @@ export default function Home() {
         <Features7 />
         <Features13 />
         <TestimonialsSearch />
+        <GalleryCarousel />
         <FAQ1 />
         <Contact />
       </main>

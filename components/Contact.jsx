@@ -67,7 +67,7 @@ export default function Contact() {
                 <span className="block text-sm text-neutral-500 dark:text-neutral-400">
                   Adresse
                 </span>
-                <span className="font-heading text-lg font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-xl">
+                <span className="font-heading text-base font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-lg">
                   {siteConfig.street}, {siteConfig.postalCode}{" "}
                   {siteConfig.locality}
                 </span>
@@ -84,7 +84,7 @@ export default function Contact() {
                 <span className="block text-sm text-neutral-500 dark:text-neutral-400">
                   Telefon
                 </span>
-                <span className="font-heading text-lg font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-xl">
+                <span className="font-heading text-base font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-lg">
                   {siteConfig.phoneDisplay}
                 </span>
               </span>
@@ -100,7 +100,7 @@ export default function Contact() {
                 <span className="block text-sm text-neutral-500 dark:text-neutral-400">
                   E-Mail
                 </span>
-                <span className="block break-all font-heading text-lg font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-xl">
+                <span className="block break-all font-heading text-base font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-lg">
                   {siteConfig.email}
                 </span>
               </span>
@@ -118,7 +118,7 @@ export default function Contact() {
                 <span className="block text-sm text-neutral-500 dark:text-neutral-400">
                   Anfahrt
                 </span>
-                <span className="font-heading text-lg font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-xl">
+                <span className="font-heading text-base font-bold tracking-tight text-neutral-900 group-hover:text-brand dark:text-white sm:text-lg">
                   Route berechnen
                 </span>
               </span>
