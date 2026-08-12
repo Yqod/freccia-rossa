@@ -3,6 +3,7 @@ import { Features5 } from "@/components/features-5";
 import Pricing3 from "@/components/pricing-3";
 import Features7 from "@/components/features-7";
 import { Features13 } from "@/components/features-13";
+import WheelService from "@/components/wheel-service";
 import TestimonialsSearch from "@/components/shadcnui/testimonials-search";
 import GalleryCarousel from "@/components/gallery-carousel";
 import FAQ1 from "@/components/faq-1";
@@ -52,6 +53,7 @@ export default function Home() {
         <Pricing3 />
         <Features7 />
         <Features13 />
+        <WheelService />
         <TestimonialsSearch />
         <GalleryCarousel />
         <FAQ1 />
